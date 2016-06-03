@@ -12,9 +12,21 @@
 
 	<header class="navbar navbar-default" role="navigation">
 	<div class="container">
+	<% if flash[:notice] %>
+	<div class="alert alert-success">
+	<%= flash[:notice] %>
+	</div>
+	<% end %>
+	<%= yield %>
+	</div>
 	<div class="navbar-header">
 	<%= link_to 'AwesomeEvents', root_path, class: 'navbar-brand' %>
-	<div>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav navbar-right">
+	<li><%= link_to 'Twitterでログイン', '/auth/twitter' %></li>
+	</ul>
+	</div>
 	</div>
 	</header>
 
