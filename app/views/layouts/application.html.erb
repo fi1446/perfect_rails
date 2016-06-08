@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>AwesomeEvents</title>
-	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta charset="utf-8">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,20 +10,30 @@
 <body>
 
 	<header class="navbar navbar-default" role="navigation">
+
 	<div class="container">
 	<% if flash[:notice] %>
 	<div class="alert alert-success">
 	<%= flash[:notice] %>
 	</div>
 	<% end %>
-	<%= yield %>
+	<% if flash[:alert] %>
+	<div class="alert alert-danger">
+		<%= flash[:alert] %>
+	</div>
+	<% end %>
 	</div>
 	<div class="navbar-header">
 	<%= link_to 'AwesomeEvents', root_path, class: 'navbar-brand' %>
 	</div>
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	<ul class="nav navbar-nav navbar-right">
+		<li><%= link_to 'イベントを作る', new_event_path %></li>
+	<% if logged_in? %>
+	<li><%= link_to 'ログアウト', logout_path %></li>
+	<% else %>
 	<li><%= link_to 'Twitterでログイン', '/auth/twitter' %></li>
+	<% end %>
 	</ul>
 	</div>
 	</div>
@@ -32,6 +41,7 @@
 
 <div class="container">
 <%= yield %>
+
 </div>
 
 </body>
