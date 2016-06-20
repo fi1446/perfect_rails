@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
     render 'error404', status: 404, formats: [:html]
   end
 
-  def error505(e)
+  def error500(e)
     render 'error500', status: 500, formats: [:html]
   end
 
