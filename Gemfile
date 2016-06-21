@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
@@ -17,10 +16,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'omniauth', '~> 1.2.1'
 gem 'omniauth-twitter', '~> 1.0.1'
 
-  gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
-  gem 'pry-doc'    # methodを表示
-  gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
-  gem 'pry-stack_explorer' # スタックをたどれる
+gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
+gem 'pry-doc'    # methodを表示
+gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
+gem 'pry-stack_explorer' # スタックをたどれる
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,18 +42,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'kaminari', '~> 0.15.1'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 
-gem 'ransack', '~> 1.2.2'
+gem 'ransack'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+    gem 'byebug'
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+    # Access an IRB console on exception pages or by using <%= console %> in views
+    gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+    # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+    gem 'spring'
 end
-
