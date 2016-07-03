@@ -45,7 +45,7 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 #動かないのでコメントアウト
 # gem 'ransack'
 
-gem 'carrierwave'
+gem 'carrierwave', '~> 0.10.0'
 
 group :development, :test do
     # Call 'byebug' anywhere in the code to stop execution and get a debugger console
