@@ -56,7 +56,6 @@ group :development, :test do
     gem 'rspec-rails'
     gem 'rspec-core'
     gem 'rspec-expectations'
-    gem 'rspec-mock'
     gem 'rspec-support'
 end
 
