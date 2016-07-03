@@ -59,6 +59,7 @@ group :development, :test do
     gem 'rspec-support'
 
     gem 'shoulda-matchers'
+    gem 'capybara'
     gem 'factory_girl_rails'
 end
 
