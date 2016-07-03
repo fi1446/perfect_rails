@@ -57,6 +57,9 @@ group :development, :test do
     gem 'rspec-core'
     gem 'rspec-expectations'
     gem 'rspec-support'
+
+    gem 'shoulda-matchers'
+    gem 'factory_girl_rails'
 end
 
 group :development do
