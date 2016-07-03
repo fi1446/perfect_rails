@@ -42,11 +42,29 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'kaminari', '~> 0.15.1'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 
-gem 'ransack'
+#動かないのでコメントアウト
+# gem 'ransack'
+
+gem 'carrierwave', '~> 0.10.0'
+
+gem 'mini_magick'
 
 group :development, :test do
     # Call 'byebug' anywhere in the code to stop execution and get a debugger console
     gem 'byebug'
+
+    gem 'rspec-rails'
+    gem 'rspec-core'
+    gem 'rspec-expectations'
+    gem 'rspec-support'
+
+    gem 'shoulda-matchers'
+    gem 'capybara'
+    gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'nokogiri', '1.6.1'
 end
 
 group :development do
