@@ -47,9 +47,17 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 
 gem 'carrierwave', '~> 0.10.0'
 
+gem 'mini_magick'
+
 group :development, :test do
     # Call 'byebug' anywhere in the code to stop execution and get a debugger console
     gem 'byebug'
+
+    gem 'rspec-rails'
+    gem 'rspec-core'
+    gem 'rspec-expectations'
+    gem 'rspec-mock'
+    gem 'rspec-support'
 end
 
 group :development do
